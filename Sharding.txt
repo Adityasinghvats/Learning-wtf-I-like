@@ -1,0 +1,17 @@
+Sharding can be explained as distributing the rows of data in different database instance .It is done by horizontal partitioning.
+Benefits:-
+Data partition - Data is distributed among dbs.
+
+Shard key - each row has a particular type where it belongs to.
+
+Distributed queries - Parallel queries can be made to access different parts at the same time.
+
+Algorithms:-
+Ranged/Dynamic Sharding :- Ranged sharding, or dynamic sharding, takes a field on the record as an input and, based on a predefined range, allocates that record to the appropriate shard. Ranged sharding requires there to be a lookup table or service available for all queries or writes.
+
+Algorithmic/hashed sharding:-Algorithmic sharding or hashed sharding, takes a record as an input and applies a hash function or algorithm to it which generates an output or hash value. This output is then used to allocate each record to the appropriate shard.
+Entity-/relationship-based sharding.
+
+Entity-based sharding:-keeps related data together on a single physical shard. In a relational database (such as PostgreSQL, MySQL, or SQL Server), related data is often spread across several different tables.
+
+Geography-based sharding;- or geosharding, also keeps related data together on a single shard, but in this case, the data is related by geography. This is essentially ranged sharding where the shard key contains geographic information and the shards themselves are geo-located.
