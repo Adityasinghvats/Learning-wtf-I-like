@@ -1,0 +1,75 @@
+Git 
+1.git add . -> bring all files at once to staging area.
+2.git commit -m ""  m-> message for commit, git push.
+3.git log -> details , use flags like --oneline.To exit press q.
+4.Atomic commits -> Commit one unit of change , present tense imperative give order (e.g.ADD footer)
+5.Add .gitadd to files folder which does not have any content but will be added afterwards otherwise empty file is not added.
+6.Git snapshots -> original and new file saved , it not a screenshot rather the type of file itself.
+7.Musketeers of git
+	commit object, tree object , blob object
+8.fancy or porcelain commands -> useful high level like add , commit.
+9.Garedning commands -> generate sha id , index using sha id to add, commit has many different command on it own.
+10.git branch -> Show branches
+11.git branch <name of the new branch> -> Create new branch
+12.git switch <name of new branch> -> Switch to new branch
+13.git switch -c <name of new branch> -> Create and switch
+14.git checkout <name> -> switch to branch
+15.git merge <name> -> straight forward merge into main branch(main branch me jake karo)
+16.merge conflicts -> making similar changes to same file in more than one branch.
+17.git branch -m <old name> <new name> -> change name
+18.git branch -d <name> -> delete.
+19.git diff --<where to differentiate>
+20.git diff <first entity> <second entity>
+21.stashing -> store change in temporary location , used when we just git add file in one branch and need to check something in other branch without committing the new file.
+22.git tag -a <name> -m <message>
+23.git rebase
+24.git reflog
+25.git remote -v -> to check how many remote repo are there
+26.git pull -> update local repo with changes made to remote repo by other contributors.
+27.git show <commit id>
+
+
+$touch readme.md
+git init
+git add readme.md
+git commit -m "Initial commit"
+git remote add origin <link>
+git remote -v
+git branch -M main
+git push -u origin main
+
+git remote remove origin -> delete remote connection
+
+rm .git -> untrack a repo
+
+Local repo to remote 
+git checkout -b my-new-branch
+git add .
+git commit -m "Your commit message"
+git push origin my-new-branch
+
+Remote to local
+Create a branch in GitHub then
+git fetch origin
+git checkout -b <name> origin/name
+
+The local and remote branches are different so need to delete them separately
+git branch -D <name> -> forcefully delete with not committed changes
+
+fetch vs. pull
+$git fetch: This command downloads commits, files, and refs from a remote repository into your local repository, but it doesn't merge them with your local branches. It’s like saying, “Hey, what's new?” but not touching anything just yet. You would use git fetch when you want to see what changes are available before deciding to integrate them.
+
+$git pull: This is essentially a combination of git fetch followed by git merge. It fetches the remote updates and then immediately merges them into the current branch. It’s like saying, “Gimme everything new and mix it with what I've got right now.” Use git pull when you’re ready to integrate changes from the remote repository into your current branch.
+
+$git reset [file]: Unstage a file.
+$git checkout -- [file]: Discard changes in a working directory.
+$git revert [commit]: Revert a commit.
+
+Next steps
+Git Hooks: Automate tasks by running scripts before or after certain Git events. Look into pre-commit, post-commit, pre-push, etc.
+
+Submodules: Manage dependencies by adding external repositories as subdirectories. Useful for incorporating shared libraries.
+
+Interactive Rebase: Master reordering, editing, or squashing commits in your branch history to keep your commit history clean and meaningful.
+
+Bisecting: Use git bisect to find bugs efficiently by performing a binary search through your commit history.
