@@ -1,0 +1,12 @@
+Flux was built at facebook to solve the context problem.
+Then Redux cam with better implemtation with UDF, single source of truth etc.
+React - redux is for wiring both.
+Then Redux toolkit solved the lengthy configuration process of redux.
+
+Importants parts
+1. Store - storage of state
+2. reudcers - control of states with functionality / rtk has slices for same thing
+3. methods - useSelector , useDispatch
+4. context api has only function declaration but here we write function definition as well
+5. each definittion gets 2 things - state , action
+6. dispatch using the reducer make changes in the store
