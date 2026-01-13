@@ -1,0 +1,28 @@
+1. ssh -i "C:\Users\adity\Downloads\VideoTubeMC_key.pem" azureuser@20.205.18.0
+2. sudo apt update
+3. sudo apt upgrade
+4. sudo useradd -m -s /bin/bash videotube
+5. groups videotube
+6. sudo usermod -aG sudo videotube
+7. sudo passwd videotube (videotube)
+8. sudo mkdir -p /home/videotube/.ssh
+9. sudo cp /home/azureuser/.ssh/authorized_keys /home/videotube/.ssh/
+10. sudo chown -R videotube:videotube /home/videotube/.ssh
+sudo chmod 700 /home/videotube/.ssh
+sudo chmod 600 /home/videotube/.ssh/authorized_keys
+ - This works for both users so don't need to do I separately
+10. ssh into root to disble root login
+11. sudo nano /etc/ssh/sshd_config
+12. Change PermitRootLogin no and PasswordAuthenication no
+13. sudo systemctl restart ssh
+14. create inbound rules in azure network console
+15. Get nginx setup from docs
+
+// For Docker
+1. Install using docs
+2. sudo groupadd docker
+3. sudo usermod -aG docker $USER
+4. newgrp docker
+5. groups (check)
+6. docker compose -up --no-cache
+7. docker compose up -d
